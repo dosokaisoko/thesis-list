@@ -1,28 +1,62 @@
-てすと2
+てすと3完成品です
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>テスト版</title>
+<title>印西市民アカデミー卒論データベース検索</title>
 <style>
   body { font-family: sans-serif; }
   table { border-collapse: collapse; width: 100%; margin-top: 10px; }
   th, td { border: 1px solid #ccc; padding: 6px; }
   th { background: #f0f0f0; }
+  select, input { padding: 6px; margin-right: 10px; }
 </style>
 </head>
 <body>
 
-<h2>テスト：卒論データベース検索</h2>
+<h2>印西市民アカデミー 卒論データベース検索</h2>
 
+<!-- 🔎 フィルタ UI -->
+<label>卒業年度（期）</label>
 <select id="termFilter">
   <option value="">すべて</option>
   <option value="1期">1期</option>
+  <option value="2期">2期</option>
+  <option value="3期">3期</option>
+  <option value="4期">4期</option>
+  <option value="5期">5期</option>
+  <option value="6期">6期</option>
+  <option value="7期">7期</option>
+  <option value="8期">8期</option>
+  <option value="9期">9期</option>
+  <option value="10期">10期</option>
+  <option value="11期">11期</option>
+  <option value="12期">12期</option>
+  <option value="13期">13期</option>
+  <option value="14期">14期</option>
+  <option value="15期">15期</option>
+  <option value="16期">16期</option>
+  <option value="17期">17期</option>
+  <option value="18期">18期</option>
+  <option value="19期">19期</option>
+  <option value="20期">20期</option>
+  <option value="21期">21期</option>
+  <option value="22期">22期</option>
+  <option value="23期">23期</option>
+  <option value="24期">24期</option>
+  <option value="25期">25期</option>
+  <option value="26期">26期</option>
 </select>
 
+<label>分類</label>
 <select id="categoryFilter">
   <option value="">すべて</option>
   <option value="歴史">歴史</option>
+  <option value="伝統">伝統</option>
+  <option value="健康">健康</option>
+  <option value="福祉">福祉</option>
+  <option value="防災">防災</option>
+  <option value="自然">自然</option>
 </select>
 
 <input id="keywordBox" type="text" placeholder="キーワード検索">
@@ -43,6 +77,7 @@
 </table>
 
 <script>
+// ★★★ ここにあなたのデータを貼り付ける（分類カテゴリを追加）★★★
 const data = [
  {
     "id": 1,
@@ -194,9 +229,1310 @@ const data = [
     "members": "久永正治･加藤文男･土屋正之･平澤良典･諸橋和子",
     "category": "自然"
   },
-
+ {
+    "id": 16,
+    "term": "5期 H16（2004）",
+    "code": "5-③",
+    "title": "印西市中心市街地活性化について －木下、大森地区問題－",
+    "subtitle": "",
+    "group": "",
+    "members": "奥村恒久･小暮昌幸･大津正",
+    "category": "歴史"
+  },
+  {
+    "id": 17,
+    "term": "5期 H16（2004）",
+    "code": "5-④",
+    "title": "健康ウォ－キングマップの作成",
+    "subtitle": "",
+    "group": "",
+    "members": "大沼孝子･河原直子･林正夫",
+    "category": "健康"
+  },
+  {
+    "id": 18,
+    "term": "6期 H17（2005）",
+    "code": "6-①",
+    "title": "子どもの遊び",
+    "subtitle": "",
+    "group": "",
+    "members": "小野寺正内･喜多村利吉･大貫秀雄",
+    "category": "健康"
+  },
+  {
+    "id": 19,
+    "term": "6期 H17（2005）",
+    "code": "6-②",
+    "title": "『江戸時代』印西とその周辺の俳諧について",
+    "subtitle": "",
+    "group": "",
+    "members": "田波英俊･嶋津乙二･田波章子",
+    "category": "歴史"
+  },
+  {
+    "id": 20,
+    "term": "6期 H17（2005）",
+    "code": "6-③",
+    "title": "印西・里山の自然",
+    "subtitle": "",
+    "group": "印西里山の自然を考える会",
+    "members": "加藤徹･木田耕造",
+    "category": "自然"
+  },
+  {
+    "id": 21,
+    "term": "6期 H17（2005）",
+    "code": "6-④",
+    "title": "新しい魅力あるまちづくり『10年後もシニアにとって住みよいまち』",
+    "subtitle": "",
+    "group": "",
+    "members": "石井栄三郎･木村淑子･駒あさ子･清倉範夫･塩谷忠嗣･吉田順子",
+    "category": "福祉"
+  },
+  {
+    "id": 22,
+    "term": "6期 H17（2005）",
+    "code": "6-⑤",
+    "title": "健康とがん『元気で長生きしてポックリ死ぬ』",
+    "subtitle": "",
+    "group": "健康を考える会",
+    "members": "佐藤三郎･岩井民･加藤眞理子･渡辺るみ",
+    "category": "健康"
+  },
+  {
+    "id": 23,
+    "term": "6期 H17（2005）",
+    "code": "6-⑥",
+    "title": "介護保険・介護施設",
+    "subtitle": "",
+    "group": "介護保険グル－プ",
+    "members": "石黒陽子･春日美智子･塚口房江･原和子",
+    "category": "福祉"
+  },
+  {
+    "id": 24,
+    "term": "7期 H18（2006）",
+    "code": "7-①",
+    "title": "竹の魅力 －印西の竹の活かし方－",
+    "subtitle": "",
+    "group": "",
+    "members": "岩井茂･久保寺英夫･堺義昭･武藤邦芳",
+    "category": "自然"
+  },
+  {
+    "id": 25,
+    "term": "7期 H18（2006）",
+    "code": "7-②",
+    "title": "印西七福神考",
+    "subtitle": "",
+    "group": "",
+    "members": "渡辺壽･金久悦規･吉岡幸子･飯田沙知子･長谷川文子",
+    "category": "伝統"
+  },
+  {
+    "id": 26,
+    "term": "8期 H18（2006）",
+    "code": "8-①",
+    "title": "健康増進と生涯スポ－ツ",
+    "subtitle": "",
+    "group": "第8期生1班",
+    "members": "鮫島俊英･小林正勝･小林由紀子",
+    "category": "健康"
+  },
+  {
+    "id": 27,
+    "term": "8期 H18（2006）",
+    "code": "8-②",
+    "title": "印西の長屋門巡り",
+    "subtitle": "",
+    "group": "第8期生2班",
+    "members": "岩淵恵美子･小暮昌幸･松田亮一･村形彰治",
+    "category": "歴史"
+  },
+  {
+    "id": 28,
+    "term": "8期 H18（2006）",
+    "code": "8-③",
+    "title": "郷土料理と食文化",
+    "subtitle": "",
+    "group": "",
+    "members": "片岡敏夫･渡辺光子･酒井澄子･中澤尚子",
+    "category": "伝統"
+  },
+  {
+    "id": 29,
+    "term": "8期 H18（2006）",
+    "code": "8-④",
+    "title": "IT関連「エクセルの学習」",
+    "subtitle": "",
+    "group": "",
+    "members": "佐々木勝実･島田松子･針生幸子･柳原智子･梅澤馨",
+    "category": "その他"
+  },
+  {
+    "id": 30,
+    "term": "9期 H19（2007）",
+    "code": "9-①",
+    "title": "竹取物語 印西の巻",
+    "subtitle": "",
+    "group": "竹取物語班 竹々研究会",
+    "members": "高橋誠･寺田節子",
+    "category": "伝統"
+  },
+  {
+    "id": 31,
+    "term": "9期 H19（2007）",
+    "code": "9-②",
+    "title": "印西大師の歴史を廻る散歩コ－スの作成",
+    "subtitle": "印西の歴史と信仰を訪ねて",
+    "group": "印西大師コ－ス研究班",
+    "members": "櫛田良雄･後藤美津子",
+    "category": "歴史"
+  },
+  {
+    "id": 32,
+    "term": "9期 H19（2007）",
+    "code": "9-③",
+    "title": "いんざい「地域福祉考」〜 私たちの福祉ボランティア活動体験 〜",
+    "subtitle": "",
+    "group": "福祉ボランティア研究班",
+    "members": "関根哲夫･石井三幸･櫛田真由美･河田省吾",
+    "category": "福祉"
+  },
+  {
+    "id": 33,
+    "term": "9期 H19（2007）",
+    "code": "9-④",
+    "title": "健康に生きていくためには 〜 ウォ－キング編 ～",
+    "subtitle": "",
+    "group": "ウォ－キング班",
+    "members": "影山幸男",
+    "category": "健康"
+  },
+  {
+    "id": 34,
+    "term": "10期 H20（2008）",
+    "code": "10-①",
+    "title": "Stop the地球温暖化",
+    "subtitle": "",
+    "group": "",
+    "members": "野中康義",
+    "category": "防災"
+  },
+  {
+    "id": 35,
+    "term": "10期 H20（2008）",
+    "code": "10-②",
+    "title": "STOP 地球温暖化《地域に密着した温暖化防止》",
+    "subtitle": "",
+    "group": "",
+    "members": "大津カツ子",
+    "category": "防災"
+  },
+  {
+    "id": 36,
+    "term": "10期 H20（2008）",
+    "code": "10-③",
+    "title": "印西の水塚 －発作・亀成地区を歩く－",
+    "subtitle": "",
+    "group": "",
+    "members": "津村隆尋･津村昌子",
+    "category": "歴史"
+  },
+  {
+    "id": 37,
+    "term": "10期 H20（2008）",
+    "code": "10-④",
+    "title": "日本三井「日影の井戸、月影の井、星の井」",
+    "subtitle": "",
+    "group": "",
+    "members": "加藤喜代子･加藤武",
+    "category": "歴史"
+  },
+  {
+    "id": 38,
+    "term": "10期 H20（2008）",
+    "code": "10-⑤",
+    "title": "地元産の食材と子ども達 ＝漢方の知恵で健康づくり＝",
+    "subtitle": "",
+    "group": "",
+    "members": "首藤稔･篠原年枝･三山美幸",
+    "category": "健康"
+  },
+  {
+    "id": 39,
+    "term": "10期 H20（2008）",
+    "code": "10-⑥",
+    "title": "印西“味のガイドブック”【いい店・うまい店】",
+    "subtitle": "うなぎ・寿司・そば処編",
+    "group": "",
+    "members": "村形彰治･佐々木勝実･小林正勝",
+    "category": "伝統"
+  },
+  {
+    "id": 40,
+    "term": "10期 H20（2008）",
+    "code": "10-⑦",
+    "title": "読書で紐解き、カメラで辿る「戸神川図志」",
+    "subtitle": "",
+    "group": "",
+    "members": "佐々木駿介逸･見明子",
+    "category": "自然"
+  },
+  {
+    "id": 41,
+    "term": "10期 H20（2008）",
+    "code": "10-⑧",
+    "title": "印西の福祉を学び・考える",
+    "subtitle": "",
+    "group": "",
+    "members": "木村のぶ･田村次郎･新美友彦･西園博雄･野中彪男",
+    "category": "福祉"
+  },
+  {
+    "id": 42,
+    "term": "11期 H21（2009）",
+    "code": "11-①",
+    "title": "環境にやさしい家庭菜園 －有機・無農薬野菜づくりの挑戦－",
+    "subtitle": "",
+    "group": "地域活性化班",
+    "members": "本多勝治",
+    "category": "自然"
+  },
+  {
+    "id": 43,
+    "term": "11期 H21（2009）",
+    "code": "11-②",
+    "title": "こころに歌を（絆の輪をひろげよう）",
+    "subtitle": "",
+    "group": "絆班",
+    "members": "小田富子･加藤眞代･松島弘子･吉田茂美",
+    "category": "福祉"
+  },
+  {
+    "id": 44,
+    "term": "11期 H21（2009）",
+    "code": "11-③",
+    "title": "印西市及び近隣の神社と神々（神話と古典に学ぶ）",
+    "subtitle": "",
+    "group": "神社研究班",
+    "members": "小田芳久･岡部鎔子･斎藤繁･坂巻賢治･千々石栄子･照内久雄",
+    "category": "歴史"
+  },
+  {
+    "id": 45,
+    "term": "12期 H22（2010）",
+    "code": "12-①-1",
+    "title": "「印西の誇り」に関するアンケート調査",
+    "subtitle": "",
+    "group": "文化グループ",
+    "members": "松田克己・玉木実",
+    "category": "歴史"
+  },
+  {
+    "id": 46,
+    "term": "12期 H22（2010）",
+    "code": "12-①-2",
+    "title": "「印西の方言」について",
+    "subtitle": "",
+    "group": "文化グループ",
+    "members": "清水太紀子",
+    "category": "歴史"
+  },
+  {
+    "id": 47,
+    "term": "12期 H22（2010）",
+    "code": "12-①-3",
+    "title": "「印西の特産品」について",
+    "subtitle": "",
+    "group": "文化グループ",
+    "members": "三小田國光",
+    "category": "伝統"
+  },
+  {
+    "id": 48,
+    "term": "12期 H22（2010）",
+    "code": "12-①-4",
+    "title": "「印西の郷土食」",
+    "subtitle": "",
+    "group": "文化グループ",
+    "members": "土屋猛",
+    "category": "伝統"
+  },
+  {
+    "id": 49,
+    "term": "12期 H22（2010）",
+    "code": "12-※",
+    "title": "ブログに挑戦（印西市民アカデミー12期生卒業研究）",
+    "subtitle": "",
+    "group": "広報担当",
+    "members": "清水太紀子",
+    "category": "その他"
+  },
+  {
+    "id": 50,
+    "term": "12期 H22（2010）",
+    "code": "12-②",
+    "title": "新 印西八景",
+    "subtitle": "",
+    "group": "",
+    "members": "青江忠昭･永石真弓･松田克己",
+    "category": "自然"
+  },
+    {
+    "id": 51,
+    "term": "12期 H22（2010）",
+    "code": "12-③",
+    "title": "印西市の巨木（神社佛閣を訪ね歩く）",
+    "subtitle": "",
+    "group": "巨木グループ",
+    "members": "朝生昭夫･井上兼一･海老原道子･藤田勲･藤田典子",
+    "category": "自然"
+  },
+  {
+    "id": 52,
+    "term": "12期 H22（2010）",
+    "code": "12-④",
+    "title": "山と温泉",
+    "subtitle": "",
+    "group": "健康グループ",
+    "members": "狩野千春･清水稔",
+    "category": "健康"
+  },
+  {
+    "id": 53,
+    "term": "12期 H22（2010）",
+    "code": "12-⑤",
+    "title": "小さな発見！ 小径のある風景",
+    "subtitle": "",
+    "group": "小径グループ",
+    "members": "岡田初枝･河田澤代･中田満徳･西本洋･松田克己",
+    "category": "自然"
+  },
+  {
+    "id": 54,
+    "term": "13期 H23（2011）",
+    "code": "13-①",
+    "title": "中世の城跡を訪ねて ～つわもの達の夢の跡～",
+    "subtitle": "",
+    "group": "城跡調査グループ",
+    "members": "折田くに子･木内光子･古口幸美子･黒川道生･山本良男",
+    "category": "歴史"
+  },
+  {
+    "id": 55,
+    "term": "13期 H23（2011）",
+    "code": "13-②",
+    "title": "東日本大震災に学ぶ 『3.11を教訓に我々市民は何をすべきか』",
+    "subtitle": "",
+    "group": "防災グループ",
+    "members": "加藤隆･山本章",
+    "category": "防災"
+  },
+  {
+    "id": 56,
+    "term": "13期 H23（2011）",
+    "code": "13-③",
+    "title": "成田街道を学ぶ・歩く 成田山参詣物語",
+    "subtitle": "",
+    "group": "成田街道を学ぶ･歩くグループ",
+    "members": "奥山泉･吉永和彦･米井光男",
+    "category": "歴史"
+  },
+  {
+    "id": 57,
+    "term": "13期 H23（2011）",
+    "code": "13-④",
+    "title": "印西市民が選んだ [ 私が選ぶ 印西十景 ]",
+    "subtitle": "",
+    "group": "",
+    "members": "水野龍司･塘タキ子",
+    "category": "自然"
+  },
+  {
+    "id": 58,
+    "term": "13期 H23（2011）",
+    "code": "13-⑤",
+    "title": "印西の「街づくり」 -今の印西と10年後の新印西-",
+    "subtitle": "",
+    "group": "",
+    "members": "飯村利夫･飯村通子･髙杉進･髙杉幸子",
+    "category": "福祉"
+  },
+  {
+    "id": 59,
+    "term": "13期 H23（2011）",
+    "code": "13-⑥",
+    "title": "老後をどう生きるか",
+    "subtitle": "",
+    "group": "",
+    "members": "髙杉幸子･藤岡克則･藤嶋勝･吉田正明･吉田穣",
+    "category": "健康"
+  },
+  {
+    "id": 60,
+    "term": "13期 H23（2011）",
+    "code": "13-⑦",
+    "title": "高齢者の健康と運動 いつまでも自分の足で歩けるように",
+    "subtitle": "",
+    "group": "",
+    "members": "藤嶋勝･吉田正明･髙杉幸子･藤岡克則･吉田穣",
+    "category": "健康"
+  },
+  {
+    "id": 61,
+    "term": "14期 H24（2012）",
+    "code": "14-1-①",
+    "title": "がんばる!! 私たち",
+    "subtitle": "",
+    "group": "第14期生A班",
+    "members": "乾美知男･菅野八重子･菊池照子･栗原麗子･阪本志津枝･髙美枝子･髙橋知博･養田君江･吉野良子",
+    "category": "健康"
+  },
+  {
+    "id": 62,
+    "term": "14期 H24（2012）",
+    "code": "14-1-②",
+    "title": "先輩たちに乾杯 ―歳を重ねてもハツラツと生きる秘訣を探る―",
+    "subtitle": "",
+    "group": "第14期生A班",
+    "members": "",
+    "category": "健康"
+  },
+  {
+    "id": 63,
+    "term": "14期 H24（2012）",
+    "code": "14-1-③",
+    "title": "輝く健康人生",
+    "subtitle": "",
+    "group": "第14期生A班",
+    "members": "",
+    "category": "健康"
+  },
+  {
+    "id": 64,
+    "term": "14期 H24（2012）",
+    "code": "14-2-①",
+    "title": "印西の里山文化めぐり",
+    "subtitle": "",
+    "group": "里山文化めぐりグループ",
+    "members": "丸山章･脇坂悟",
+    "category": "自然"
+  },
+  {
+    "id": 65,
+    "term": "14期 H24（2012）",
+    "code": "14-2-②",
+    "title": "印西の歴史遺産めぐり記",
+    "subtitle": "",
+    "group": "印西の歴史遺産めぐりグループ",
+    "members": "佐々木護･脇坂悟",
+    "category": "歴史"
+  },
+  {
+    "id": 66,
+    "term": "14期 H24（2012）",
+    "code": "14-2-③",
+    "title": "印西探訪マップ",
+    "subtitle": "",
+    "group": "印西探訪マップグループ",
+    "members": "服部徳夫･恩田千代江･金井みゆき･鈴木ハナエ･武藤ひろ子",
+    "category": "自然"
+  },
+  {
+    "id": 67,
+    "term": "14期 H24（2012）",
+    "code": "14-2-④",
+    "title": "印西大師を楽しむ",
+    "subtitle": "",
+    "group": "印西大師グループ",
+    "members": "諸橋雄一郎･金井みゆき",
+    "category": "歴史"
+  },
+  {
+    "id": 68,
+    "term": "15期 H25（2013）",
+    "code": "15-①",
+    "title": "龍の棲む印西",
+    "subtitle": "",
+    "group": "『龍』グループ",
+    "members": "朝倉静子･土屋一男･奈良崎清江･早川千恵子･林俊行",
+    "category": "伝統"
+  },
+  {
+    "id": 69,
+    "term": "15期 H25（2013）",
+    "code": "15-②",
+    "title": "印西大師の霊場巡り 里山のパワ－スポット、88ヶ所・120キロｍを歩く",
+    "subtitle": "",
+    "group": "印西大師グループ",
+    "members": "古田芳輝･直江英男･妻井通宏･川上通之",
+    "category": "歴史"
+  },
+  {
+    "id": 70,
+    "term": "15期 H25（2013）",
+    "code": "15-③",
+    "title": "神社を訪ねて印西市の歴史を学ぶ",
+    "subtitle": "",
+    "group": "",
+    "members": "川上通之･吉田芳輝･妻井道宏･直江英男",
+    "category": "歴史"
+  },
+  {
+    "id": 71,
+    "term": "15期 H25（2013）",
+    "code": "15-④",
+    "title": "いんざいの民話 ～ 魂に触れ、先人たちと心を共有 〜",
+    "subtitle": "",
+    "group": "歴史･文化グループ民話班",
+    "members": "湯澤三千夫･寺嶋英俊",
+    "category": "伝統"
+  },
+  {
+    "id": 72,
+    "term": "15期 H25（2013）",
+    "code": "15-⑤",
+    "title": "印西の里山 自然探索",
+    "subtitle": "",
+    "group": "里山散策グループ 自然探索班",
+    "members": "浅井紳之介･布津紀子･門田直子",
+    "category": "自然"
+  },
+  {
+    "id": 76,
+    "term": "16期 H26（2014）",
+    "code": "16-①",
+    "title": "旧印旛村の石造物 ～松虫地区の石造物〜",
+    "subtitle": "",
+    "group": "",
+    "members": "秋田幸枝･松田ひろみ･大和屋貞子･大和屋直俊",
+    "category": "歴史"
+  },
+  {
+    "id": 77,
+    "term": "16期 H26（2014）",
+    "code": "16-②",
+    "title": "ニュ－スポ－ツを楽しもう！",
+    "subtitle": "長寿社会に備え、中高齢者が元気で自立できるよう、無理なく継続出来るスポ－ツを体験しよう！",
+    "group": "",
+    "members": "青江忠昭･桜井繁光･鈴木増夫･山本勝･横山佳世子･松浦徹",
+    "category": "健康"
+  },
+  {
+    "id": 78,
+    "term": "16期 H26（2014）",
+    "code": "16-③",
+    "title": "北総 四季の里山めぐり",
+    "subtitle": "魅惑の里山散策コ－ス",
+    "group": "里山歩きグループ",
+    "members": "大西牧男･中垣啓",
+    "category": "自然"
+  },
+  {
+    "id": 79,
+    "term": "16期 H26（2014）",
+    "code": "16-④",
+    "title": "我が町、印西市をもっと良く知ろう",
+    "subtitle": "市境を歩き、外側から印西市を観る／住みやすい街ランキングの分析",
+    "group": "",
+    "members": "井上洋一･海老原潮治･熊谷令子･福井章夫･宮崎文雄･横山登志雄",
+    "category": "歴史"
+  },
+  {
+    "id": 80,
+    "term": "16期 H26（2014）",
+    "code": "16-⑤",
+    "title": "印西市における自主防災活動",
+    "subtitle": "",
+    "group": "",
+    "members": "関井一夫･長谷川晴朗･向井地純一",
+    "category": "防災"
+  },
+  {
+    "id": 81,
+    "term": "17期 H27（2015）",
+    "code": "17-①",
+    "title": "分水嶺トレイル ―印西の流域を踏査する",
+    "subtitle": "",
+    "group": "分水嶺トレイルグループ",
+    "members": "鈴木眞二･疋田俊明･松崎登･松田克己･三浦克之･矢内甫",
+    "category": "自然"
+  },
+  {
+    "id": 82,
+    "term": "17期 H27（2015）",
+    "code": "17-②",
+    "title": "アマチュアならではの手法で家庭菜園を楽しむ",
+    "subtitle": "休耕地の活用・得意な作物のオリジナル秘密マニュアル作成",
+    "group": "家庭菜園グループ",
+    "members": "新川彰･新川美栄子･中村黄三",
+    "category": "自然"
+  },
+  {
+    "id": 83,
+    "term": "17期 H27（2015）",
+    "code": "17-③",
+    "title": "中根の大榎とともに",
+    "subtitle": "",
+    "group": "",
+    "members": "倉崎友孝･石井美千子･鍋倉妙子･林和子･松崎陽子",
+    "category": "自然"
+  },
+  {
+    "id": 84,
+    "term": "17期 H27（2015）",
+    "code": "17-④",
+    "title": "印西市における 認知症への取り組みの現在(いま)",
+    "subtitle": "",
+    "group": "",
+    "members": "片山智代･上山スイ子",
+    "category": "福祉"
+  },
+  {
+    "id": 85,
+    "term": "17期 H27（2015）",
+    "code": "17-⑤",
+    "title": "印西の伝統文化 ～無形民俗文化財（獅子舞・神楽）の継承〜",
+    "subtitle": "",
+    "group": "",
+    "members": "奥山勇五郎･菅野勉･新田峰子",
+    "category": "伝統"
+  },
+  {
+    "id": 86,
+    "term": "17期 H27（2015）",
+    "code": "17-⑥",
+    "title": "亀成川における特定外来植物",
+    "subtitle": "ナガエツルノゲイトウとアレチウリについて",
+    "group": "",
+    "members": "松崎登･松崎陽子",
+    "category": "自然"
+  },
+  {
+    "id": 87,
+    "term": "18期 H28（2016）",
+    "code": "18-①",
+    "title": "2025年 印西市高齢者福祉について",
+    "subtitle": "",
+    "group": "",
+    "members": "天ケ谷利夫･佐藤信子･斎藤朋子･林滋",
+    "category": "福祉"
+  },
+  {
+    "id": 88,
+    "term": "18期 H28（2016）",
+    "code": "18-②",
+    "title": "印西の祭り ～伝承される祭りの数々〜",
+    "subtitle": "",
+    "group": "印西の祭り研究班",
+    "members": "雨宮良明･梅川記生･岡久規･小林義典･柴崎悦男",
+    "category": "伝統"
+  },
+  {
+    "id": 89,
+    "term": "18期 H28（2016）",
+    "code": "18-③-1",
+    "title": "市内主要エリアから見た印西",
+    "subtitle": "",
+    "group": "",
+    "members": "市川琢磨･山口良男･水越利之",
+    "category": "歴史"
+  },
+  {
+    "id": 90,
+    "term": "18期 H28（2016）",
+    "code": "18-③-2",
+    "title": "牧跡から見た印西（印西の台地に野馬がいた歴史）",
+    "subtitle": "",
+    "group": "",
+    "members": "徳山富美江",
+    "category": "歴史"
+  },
+  {
+    "id": 91,
+    "term": "18期 H28（2016）",
+    "code": "18-③-3",
+    "title": "地名から見た印西（寺院・史跡など）",
+    "subtitle": "",
+    "group": "",
+    "members": "本田薫･阿部芳子･髙崎喜久子",
+    "category": "歴史"
+  },
+  {
+    "id": 92,
+    "term": "18期 H28（2016）",
+    "code": "18-④",
+    "title": "印西おじさんぽ 再発見を目指す",
+    "subtitle": "",
+    "group": "",
+    "members": "清水啓伍･長尾雄二",
+    "category": "自然"
+  },
+  {
+    "id": 93,
+    "term": "18期 H28（2016）",
+    "code": "18-⑤",
+    "title": "印西市の自然環境保全と市民活動",
+    "subtitle": "",
+    "group": "自然環境･市民活動研究グループ",
+    "members": "石井照次･上田一生･安倉史典･山内勝行･吉岡恵美子･脇坂輝子",
+    "category": "自然"
+  },
+  {
+    "id": 94,
+    "term": "19期 H29（2017）",
+    "code": "19-①",
+    "title": "印西の於ける先人の信仰について",
+    "subtitle": "寺院、神社、後期古墳からの一考察",
+    "group": "",
+    "members": "鳥塚治平･仙葉和久",
+    "category": "歴史"
+  },
+  {
+    "id": 95,
+    "term": "19期 H29（2017）",
+    "code": "19-②",
+    "title": "地名の由来と歴史について",
+    "subtitle": "",
+    "group": "",
+    "members": "山内正･風岡嘉穂･福井章夫",
+    "category": "歴史"
+  },
+  {
+    "id": 96,
+    "term": "19期 H29（2017）",
+    "code": "19-③",
+    "title": "印西里山の谷津",
+    "subtitle": "",
+    "group": "自然グループ",
+    "members": "近能善弘･小林園子･吉村壽美子･芳田丈夫･福井章夫･風岡嘉穂･山内正",
+    "category": "自然"
+  },
+  {
+    "id": 97,
+    "term": "19期 H29（2017）",
+    "code": "19-④",
+    "title": "印西の美樹・大樹を求めて！",
+    "subtitle": "",
+    "group": "自然グループ樹木班",
+    "members": "小林園子･芳田丈夫･吉村壽美子",
+    "category": "自然"
+  },
+  {
+    "id": 98,
+    "term": "19期 H29（2017）",
+    "code": "19-⑤",
+    "title": "美しき・古き・魅力ある印西を求めて！",
+    "subtitle": "",
+    "group": "自然･歴史グループ",
+    "members": "前之園敏雄･中村真知子･中山きよ子･平林光子･宮崎博子",
+    "category": "歴史"
+  },
+  {
+    "id": 99,
+    "term": "19期 H29（2017）",
+    "code": "19-⑥",
+    "title": "災害時のトイレ",
+    "subtitle": "",
+    "group": "",
+    "members": "向山千秋･佐藤哲雄･飯尾喜代子･中辻明子",
+    "category": "防災"
+  },
+  {
+    "id": 100,
+    "term": "19期 H29（2017）",
+    "code": "19-⑦",
+    "title": "印西・地域ねこ友の会について",
+    "subtitle": "立ち上げから活動報告まで",
+    "group": "",
+    "members": "佐藤憲子･佐藤吉高",
+    "category": "福祉"
+  },
+  {
+    "id": 101,
+    "term": "20期 H30（2018）",
+    "code": "20-①",
+    "title": "高齢者世帯「在宅避難生活の食事とトイレ」",
+    "subtitle": "震災に備える‼ 〜ライフラインが止まったら〜",
+    "group": "",
+    "members": "棟形貴久子･関根尚子",
+    "category": "防災"
+  },
+  {
+    "id": 102,
+    "term": "20期 H30（2018）",
+    "code": "20-②",
+    "title": "水環境問題改善の提案 －龍神やホタルが棲む沼を目指して－",
+    "subtitle": "",
+    "group": "",
+    "members": "廣瀬隆",
+    "category": "自然"
+  },
+  {
+    "id": 103,
+    "term": "20期 H30（2018）",
+    "code": "20-③-1",
+    "title": "住みよさランキング全国1位」という意義を考える",
+    "subtitle": "",
+    "group": "",
+    "members": "小嶋洋昭",
+    "category": "歴史"
+  },
+  {
+    "id": 104,
+    "term": "20期 H30（2018）",
+    "code": "20-③-2",
+    "title": "「明日の印西」を考える",
+    "subtitle": "街づくりに関する考察と提言／糸島市との比較",
+    "group": "",
+    "members": "角舘厚信",
+    "category": "福祉"
+  },
+  {
+    "id": 105,
+    "term": "20期 H30（2018）",
+    "code": "20-④-1",
+    "title": "「働く」観点からの新しい街づくり",
+    "subtitle": "",
+    "group": "",
+    "members": "平井清幹",
+    "category": "福祉"
+  },
+  {
+    "id": 106,
+    "term": "20期 H30（2018）",
+    "code": "20-④-2",
+    "title": "大規模店舗中心による印西市・千葉ニュ－タウンの街の活性化",
+    "subtitle": "",
+    "group": "",
+    "members": "髙井善勝",
+    "category": "歴史"
+  },
+  {
+    "id": 107,
+    "term": "20期 H30（2018）",
+    "code": "20-④-3",
+    "title": "私の視点「居心地のいい街」を求めて",
+    "subtitle": "",
+    "group": "",
+    "members": "稲垣利泰",
+    "category": "福祉"
+  },
+  {
+    "id": 108,
+    "term": "20期 H30（2018）",
+    "code": "20-⑤",
+    "title": "身近な鳥に親しもう 印西探鳥記録",
+    "subtitle": "",
+    "group": "",
+    "members": "山崎まり子･福井篤子･古出洋子",
+    "category": "自然"
+  },
+  {
+    "id": 109,
+    "term": "20期 H30（2018）",
+    "code": "20-⑥",
+    "title": "印西大師八十八か所札所めぐり",
+    "subtitle": "",
+    "group": "",
+    "members": "安井勝正･渡邉安雄･秋山保範･古出洋子",
+    "category": "歴史"
+  },
+  {
+    "id": 110,
+    "term": "21期 H31/R1（2019）",
+    "code": "21-①",
+    "title": "市内の巨樹・古木を訪ね、調べてみると",
+    "subtitle": "",
+    "group": "巨樹・古木研究会",
+    "members": "永野修･押田正雄･林典子･山崎幸子･平野義明",
+    "category": "自然"
+  },
+  {
+    "id": 111,
+    "term": "21期 H31/R1（2019）",
+    "code": "21-②",
+    "title": "印西市 市民活動とボランティア団体ガイド",
+    "subtitle": "",
+    "group": "ボランティアリサーチグループ",
+    "members": "加藤徹･小林美佐子･小林吉一･清野美名子･森文義･山崎幸子",
+    "category": "福祉"
+  },
+  {
+    "id": 110,
+    "term": "21期 H31/R1（2019）",
+    "code": "21-①",
+    "title": "市内の巨樹・古木を訪ね、調べてみると",
+    "subtitle": "",
+    "group": "巨樹・古木研究会",
+    "members": "永野修･押田正雄･林典子･山崎幸子･平野義明",
+    "category": "自然"
+  },
+  {
+    "id": 111,
+    "term": "21期 H31/R1（2019）",
+    "code": "21-②",
+    "title": "印西市 市民活動とボランティア団体ガイド",
+    "subtitle": "",
+    "group": "ボランティアリサーチグループ",
+    "members": "加藤徹･小林美佐子･小林吉一･清野美名子･森文義･山崎幸子",
+    "category": "福祉"
+  },
+  {
+    "id": 112,
+    "term": "21期 H31/R1（2019）",
+    "code": "21-③",
+    "title": "ぶらり印西 ガイドブック",
+    "subtitle": "印西ウォ－キングMAPを使用",
+    "group": "",
+    "members": "植松計雄･斎藤由美･櫻井豊･田野利康･中本朱美･中本久和･奈良崎美也･南保千壽･麦倉佐代子",
+    "category": "自然"
+  },
+  {
+    "id": 113,
+    "term": "21期 H31/R1（2019）",
+    "code": "21-④",
+    "title": "おいしい印西の野菜たち －地産地消の観点からの提案－",
+    "subtitle": "",
+    "group": "",
+    "members": "菅野あけ美･青木和代･矢倉淳介･櫻井豊",
+    "category": "自然"
+  },
+  {
+    "id": 114,
+    "term": "21期 H31/R1（2019）",
+    "code": "21-⑤",
+    "title": "空研 廃校施設の有効活用を考える",
+    "subtitle": "",
+    "group": "空き家研究kai",
+    "members": "平野義明･押田正雄･菅谷博･矢倉淳介･山野幸子",
+    "category": "福祉"
+  },
+  {
+    "id": 115,
+    "term": "21期 H31/R1（2019）",
+    "code": "21-⑥",
+    "title": "学び〈寺子屋＆子ども食堂 “さくら”〉 地域コミュニティの核となる存在",
+    "subtitle": "",
+    "group": "",
+    "members": "山野幸子･矢倉淳介･押田正雄･平野義明･菅谷博",
+    "category": "福祉"
+  },
+  {
+    "id": 116,
+    "term": "22期 R3（2021）",
+    "code": "22-①",
+    "title": "印西のマンホ－ル蓋とオリジナリティ",
+    "subtitle": "マンホールふたから世界に誇れる印西市へ",
+    "group": "",
+    "members": "江波戸洋子",
+    "category": "歴史"
+  },
+  {
+    "id": 117,
+    "term": "22期 R3（2021）",
+    "code": "22-②",
+    "title": "印波の古墳を巡る",
+    "subtitle": "",
+    "group": "古墳を楽しく知る会",
+    "members": "岩井忠雄･岡村佳代子･土居章展･宮沢行雄･安井克子･安井誠",
+    "category": "歴史"
+  },
+  {
+    "id": 118,
+    "term": "22期 R3（2021）",
+    "code": "22-③",
+    "title": "利根川図志の時代と現代印西を考える会",
+    "subtitle": "",
+    "group": "",
+    "members": "菅野奎佐･土居章展･根本紀代美･森国義･山本信秀",
+    "category": "歴史"
+  },
+  {
+    "id": 119,
+    "term": "22期 R3（2021）",
+    "code": "22-④",
+    "title": "利根川の東遷と印旛沼の歴史",
+    "subtitle": "",
+    "group": "",
+    "members": "藤田富久",
+    "category": "歴史"
+  },
+  {
+    "id": 120,
+    "term": "22期 R3（2021）",
+    "code": "22-⑤",
+    "title": "高齢化社会について",
+    "subtitle": "",
+    "group": "高齢化社会研究グループ",
+    "members": "本田正幸･宮澤ひな子･大島孝之･櫛野弘子･坂本由里子･高橋昭男",
+    "category": "福祉"
+  },
+ {
+    "id": 121,
+    "term": "22期 R3（2021）",
+    "code": "22-⑥",
+    "title": "健康長寿のための北総歴史散策 ～印西の記念碑をめぐる～",
+    "subtitle": "",
+    "group": "北総歴史散策グループ",
+    "members": "川野充･杉山栄一･髙橋昭雄･武田俊雄･本田正幸",
+    "category": "健康"
+  },
+  {
+    "id": 122,
+    "term": "22期 R3（2021）",
+    "code": "22-⑦",
+    "title": "素敵な野草探し隊 ～印西里山の野草観察日記～",
+    "subtitle": "",
+    "group": "",
+    "members": "橋間悦子･岩井忠雄･岩崎紀代子･岡村佳代子･山下哲子･宮澤ひな子･櫛野弘子",
+    "category": "自然"
+  },
+  {
+    "id": 123,
+    "term": "23期 R4（2022）",
+    "code": "23-①",
+    "title": "高齢者の食事と運動",
+    "subtitle": "",
+    "group": "",
+    "members": "矢治正男･高橋陽子",
+    "category": "健康"
+  },
+  {
+    "id": 124,
+    "term": "23期 R4（2022）",
+    "code": "23-②",
+    "title": "印西のみち －憂いなく夢を育み健やかに末永く暮らしたいこのまちで－",
+    "subtitle": "",
+    "group": "",
+    "members": "植木稔",
+    "category": "歴史"
+  },
+  {
+    "id": 125,
+    "term": "23期 R4（2022）",
+    "code": "23-③",
+    "title": "自然災害伝承から防災を考える",
+    "subtitle": "",
+    "group": "",
+    "members": "定森良夫･林健次",
+    "category": "防災"
+  },
+  {
+    "id": 126,
+    "term": "23期 R4（2022）",
+    "code": "23-④",
+    "title": "印西市における社会貢献活動",
+    "subtitle": "",
+    "group": "",
+    "members": "山田一二三･中田憲一･内木場政子･風間宏子･西前俊江･鈴木良子･髙田順子",
+    "category": "福祉"
+  },
+  {
+    "id": 127,
+    "term": "23期 R4（2022）",
+    "code": "23-⑤",
+    "title": "困ったときは「にぎやかす」素晴らしき人の縁",
+    "subtitle": "",
+    "group": "",
+    "members": "高田順子･鈴木良子･西前俊江･風間宏子･内木場政子･中田恵一･山田一二三",
+    "category": "福祉"
+  },
+  {
+    "id": 128,
+    "term": "24期 R5（2023）",
+    "code": "24-①",
+    "title": "あるいて感動！魅力発見！",
+    "subtitle": "へぇ～そうなの？しらなかった ビックリ！",
+    "group": "24期生メンバー",
+    "members": "小野ひとみ･小野木理絵子･河野麻子･佐久間幸一･佐藤律子･鈴木傳･早坂秀子･諸藤千鶴子･米田緑",
+    "category": "自然"
+  },
+  {
+    "id": 129,
+    "term": "24期 R5（2023）",
+    "code": "24-②",
+    "title": "市内をてくてく‥‥散策会 こぼれ話",
+    "subtitle": "",
+    "group": "",
+    "members": "",
+    "category": "自然"
+  },
+  {
+    "id": 130,
+    "term": "24期 R5（2023）",
+    "code": "24-③",
+    "title": "ふれあいバスで お散歩",
+    "subtitle": "",
+    "group": "",
+    "members": "",
+    "category": "自然"
+  },
+  {
+    "id": 131,
+    "term": "24期 R5（2023）",
+    "code": "24-④",
+    "title": "古道を往く「印西の古道と道標」",
+    "subtitle": "",
+    "group": "",
+    "members": "",
+    "category": "歴史"
+  },
+  {
+    "id": 132,
+    "term": "24期 R5（2023）",
+    "code": "24-⑤",
+    "title": "印西の歳時記おりおり",
+    "subtitle": "古に想いを馳せ、次世代へ",
+    "group": "",
+    "members": "",
+    "category": "伝統"
+  },
+  {
+    "id": 133,
+    "term": "25期 R6（2024）",
+    "code": "25-①",
+    "title": "谷津に育まれた古村の寺社 ～鎮守の祭りと秘仏を訪ねて～",
+    "subtitle": "",
+    "group": "",
+    "members": "江頭正己",
+    "category": "歴史"
+  },
+  {
+    "id": 134,
+    "term": "25期 R6（2024）",
+    "code": "25-②",
+    "title": "身近に見る野草と薬草 《散歩で見つけた有用な植物》",
+    "subtitle": "",
+    "group": "野草･薬草グループ",
+    "members": "加藤智代子･髙城國司･新井清一･江頭正己･栗井英明･竹中美保･宮城ひとみ",
+    "category": "自然"
+  },
+  {
+    "id": 135,
+    "term": "25期 R6（2024）",
+    "code": "25-③",
+    "title": "高花6丁目西地区まちづくり活動",
+    "subtitle": "ニュ－タウンのまちびらきから37年 今後のまちの在り方について",
+    "group": "",
+    "members": "片桐顕二",
+    "category": "福祉"
+  },
+  {
+    "id": 136,
+    "term": "25期 R6（2024）",
+    "code": "25-④",
+    "title": "デ－タセンタ－と『世界のＩＮＺＡＩ』",
+    "subtitle": "",
+    "group": "TEAMデータセンター",
+    "members": "栗井英明･宮城ひとみ･能川和夫･片桐顕二･竹中美保",
+    "category": "歴史"
+  },
+  {
+    "id": 137,
+    "term": "25期 R6（2024）",
+    "code": "25-⑤",
+    "title": "人生100年時代をどう生きるか",
+    "subtitle": "介護保険の活用と地域共生社会の実現に向けて",
+    "group": "",
+    "members": "能川和夫･片桐顕二･加藤智代子･髙城國司･宮城ひとみ･新井清一",
+    "category": "福祉"
+  },
+  {
+    "id": 138,
+    "term": "25期 R6（2024）",
+    "code": "25-⑥",
+    "title": "ふるさとの祭りと「木下音頭」",
+    "subtitle": "",
+    "group": "第25期生 一同",
+    "members": "第25期生　一同",
+    "category": "伝統"
+  },
+  {
+    "id": 139,
+    "term": "26期 R7（2025）",
+    "code": "26-①",
+    "title": "印西市の水事情と未給水区域の課題",
+    "subtitle": "水道敷設の歴史と未給水地域の現状と今後に向けて",
+    "group": "印西のしずく",
+    "members": "田中英明･井上陽一･木村孝夫",
+    "category": "防災"
+  },
+  {
+    "id": 140,
+    "term": "26期 R7（2025）",
+    "code": "26-②",
+    "title": "印西市における地域包括ケアシステムの構築状況について",
+    "subtitle": "認知症になっても安心して住み続けられるまちへ",
+    "group": "認知症対策グループ",
+    "members": "岡野誠･村田雅代･廣島かおる",
+    "category": "福祉"
+  },
+  {
+    "id": 141,
+    "term": "26期 R7（2025）",
+    "code": "26-③",
+    "title": "公園と健康を考える",
+    "subtitle": "地域活性化と健康増進の視点から",
+    "group": "公園と健康を考えるグループ",
+    "members": "市村幸夫･坪田由美子･中野みどり･西田眞子･吉田茂美",
+    "category": "健康"
+  },
+  {
+    "id": 142,
+    "term": "26期 R7（2025）",
+    "code": "26-④",
+    "title": "「人生100年時代」をどう生きるか ～今を生き生きと生きるための備え（相続）～",
+    "subtitle": "",
+    "group": "",
+    "members": "有馬洋子･田窪久美子･竹越祐三子･渡邊千香子",
+    "category": "福祉"
+  },
+  {
+    "id": 143,
+    "term": "26期 R7（2025）",
+    "code": "26-⑤",
+    "title": "昭和の暮らしに学ぶ スロ－フ－ド GOOD，CLEAN，FAIR",
+    "subtitle": "",
+    "group": "",
+    "members": "西田眞子･窪田久美子",
+    "category": "伝統"
+  },
+  {
+    "id": 144,
+    "term": "26期 R7（2025）",
+    "code": "26-⑥",
+    "title": "里山保全 ～未来の印西に里山を残そう〜",
+    "subtitle": "",
+    "group": "",
+    "members": "石井茂",
+    "category": "自然"
+  },
+  {
+    "id": 146,
+    "term": "26期 R7（2025）",
+    "code": "26-⑦",
+    "title": "印西市の学童保育の子ども達 発達障害･グレーゾーンの子どもについて",
+    "subtitle": "",
+    "group": "",
+  "members": "黒崎浩一",
+    "category": "福祉"
+  },
+    {
+    "id": 145,
+    "term": "26期 R7（2025）",
+    "code": "26-⑧",
+    "title": "『地球温暖化から地球沸騰化時代へ』",
+    "subtitle": "",
+    "group": "",
+  "members": "大津カツ子",
+    "category": "自然"
+  },
+// ← この形式で全期分を追加していく
 ];
 
+// テーブル描画
 function renderTable() {
   const tbody = document.querySelector("#thesisTable tbody");
   tbody.innerHTML = "";
@@ -205,14 +1541,23 @@ function renderTable() {
   const category = document.getElementById("categoryFilter").value;
   const keyword = document.getElementById("keywordBox").value.toLowerCase();
 
-  data
-    .filter(row =>
-      (!term || row.term.includes(term)) &&
-      (!category || row.category === category) &&
+data
+  .filter(row => {
+    const selectedTerm = document.getElementById("termFilter").value;
+    const selectedCategory = document.getElementById("categoryFilter").value;
+    const keyword = document.getElementById("keywordBox").value.toLowerCase();
+
+    // 期の完全一致判定
+    const rowTermPrefix = row.term.split(" ")[0]; // "1期" の部分だけ
+
+    return (
+      (!selectedTerm || rowTermPrefix === selectedTerm) &&
+      (!selectedCategory || row.category === selectedCategory) &&
       Object.values(row).some(v =>
         String(v).toLowerCase().includes(keyword)
       )
-    )
+    );
+  })
     .forEach(row => {
       const tr = document.createElement("tr");
       tr.innerHTML = `
@@ -228,10 +1573,12 @@ function renderTable() {
     });
 }
 
+// イベント設定
 document.getElementById("termFilter").addEventListener("change", renderTable);
 document.getElementById("categoryFilter").addEventListener("change", renderTable);
 document.getElementById("keywordBox").addEventListener("input", renderTable);
 
+// 初期表示
 renderTable();
 </script>
 
