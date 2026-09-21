@@ -11,7 +11,7 @@
     transform-origin: top left;
     margin: 10px;
     line-height: 1.4;
-    width: 100%;
+    width: 118%;   /* 右余白調整 */
   }
 
   table, th, td {
@@ -20,19 +20,15 @@
   }
 
   table {
-    width: 100%;
+    width: 100%;   /* 200% → 表がはみ出すので修正 */
   }
 
   th, td {
-    padding: 20px 2px;
+    padding: 6px 10px;   /* 左右余白を適正化 */
     text-align: left;
   }
-
-  table, th, td {
-    border: 1px solid #000 !important;
-    border-collapse: collapse !important;
-  }
 </style>
+
 </head>
 
 <body>
